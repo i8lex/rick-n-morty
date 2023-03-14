@@ -16,19 +16,12 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7b6257e1-41fa-4dcc-a915-cba3c9691669" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="2Me0eUuioxemGnV4WY8gaLc0wFQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -46,6 +38,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -100,21 +93,7 @@
       <option name="project" value="LOCAL" />
       <updated>1678812797576</updated>
     </task>
-    <task id="LOCAL-00002" summary="test netlify">
-      <created>1678828526591</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678828526591</updated>
-    </task>
-    <task id="LOCAL-00003" summary="test netlify">
-      <created>1678831344719</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1678831344719</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,8 +113,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="rebuid" />
-    <MESSAGE value="test netlify" />
-    <option name="LAST_COMMIT_MESSAGE" value="test netlify" />
+    <option name="LAST_COMMIT_MESSAGE" value="rebuid" />
   </component>
   <component name="WindowStateProjectService">
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1678812082316">
@@ -150,29 +128,29 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="584" y="354" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1678113295929" />
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1678828392545">
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom" timestamp="1678817862320">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1678828392545" />
-    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1678828392544">
+    <state width="1398" height="244" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1678817862320" />
+    <state width="1398" height="244" key="GridCell.Tab.0.center" timestamp="1678817862319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1678828392544" />
-    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1678828392543">
+    <state width="1398" height="244" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1678817862319" />
+    <state width="1398" height="244" key="GridCell.Tab.0.left" timestamp="1678817862318">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1678828392543" />
-    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1678828392545">
+    <state width="1398" height="244" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1678817862318" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right" timestamp="1678817862319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1678828392545" />
+    <state width="1398" height="244" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1678817862319" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1678113140041">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1678113140041" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1678831347978">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1678812809564">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1678831347978" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1678812809564" />
   </component>
 </project>

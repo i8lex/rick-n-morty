@@ -73,7 +73,6 @@ const MainPage = () => {
     <>
       <section className="section">
         <div className="section__wrapper">
-          <h1>HELLO WORLD</h1>
           <div className="section__logo">
             <img
               className="section__logo__image"

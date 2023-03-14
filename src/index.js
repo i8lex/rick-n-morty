@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./stylesheet/index.css";
 import { Application } from "./Application";
-import reportWebVitals from "./reportWebVitals";
 import { HashRouter as Router } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,4 +11,3 @@ root.render(
     </Router>
   </React.StrictMode>
 );
-reportWebVitals();

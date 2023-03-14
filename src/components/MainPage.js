@@ -43,7 +43,7 @@ const MainPage = () => {
     },
     onSubmit: ({ search }) => {
       const name = search.trim();
-      navigate(`/rick-n-morty/?page=1&name=${name}`);
+      navigate(`/?page=1&name=${name}`);
       const params = new URLSearchParams(window.location.search);
       const page = params.get("page") || 1;
       const fetchData = async () => {
@@ -62,11 +62,11 @@ const MainPage = () => {
   const handlePageClick = (data) => {
     const selectedPage = data.selected;
     const name = new URLSearchParams(window.location.search).get("name") || "";
-    navigate(`/rick-n-morty/?page=${selectedPage + 1}&name=${name}`);
+    navigate(`/?page=${selectedPage + 1}&name=${name}`);
   };
 
   const handleCardClick = (id) => {
-    navigate(`/rick-n-morty/characters/${id}`);
+    navigate(`/characters/${id}`);
   };
 
   return (

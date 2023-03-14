@@ -6,8 +6,8 @@ import Character from "./components/Character";
 export const Application = () => {
   return (
     <Routes>
-      <Route path="/rick-n-morty" element={<MainPage />} />
-      <Route path="/rick-n-morty/:id" element={<Character />} />
+      <Route path="" element={<MainPage />} />
+      <Route path="/:id" element={<Character />} />
     </Routes>
   );
 };

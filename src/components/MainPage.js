@@ -69,6 +69,8 @@ const MainPage = () => {
     navigate(`/characters/${id}`);
   };
 
+  const clientWidth = document.body.clientWidth;
+
   return (
     <>
       <section className="section">
@@ -115,8 +117,8 @@ const MainPage = () => {
           )}
           <ReactPaginate
             pageCount={totalPages}
-            pageRangeDisplayed={document.documentElement.clientWidth > 500 ? 5 : 1 }
-            marginPagesDisplayed={document.documentElement.clientWidth > 500 ? 2 : 0}
+            pageRangeDisplayed={clientWidth > 500 ? 5 : 1 }
+            marginPagesDisplayed={clientWidth > 500 ? 2 : 0}
             forcePage={currentPage}
             // initialPage={currentPage}
             onPageChange={handlePageClick}

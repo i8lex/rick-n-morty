@@ -196,8 +196,12 @@
   }
   .section__pagination {
     margin: 0 auto 30px;
+    justify-content: space-evenly;
     max-width: 390px;
     width: 100%;
+  }
+  .section__pagination li.break {
+    display: none;
   }
   .section__search {
     grid-column: 1/2;

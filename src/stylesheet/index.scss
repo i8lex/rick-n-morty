@@ -241,8 +241,14 @@
 
       &__pagination {
         margin: 0 auto 30px;
+        justify-content: space-evenly;
         max-width: 390px;
         width: 100%;
+
+        & li.break {
+          display: none;
+        }
+
       }
 
       &__search {
@@ -276,6 +282,8 @@
         row-gap: 15px;
       }
     }
+
+
 
   }
 

@@ -115,8 +115,8 @@ const MainPage = () => {
           )}
           <ReactPaginate
             pageCount={totalPages}
-            pageRangeDisplayed={2}
-            marginPagesDisplayed={1}
+            pageRangeDisplayed={document.documentElement.clientWidth > 400 ? 5 : 1 }
+            marginPagesDisplayed={document.documentElement.clientWidth > 400 ? 2 : 1}
             forcePage={currentPage}
             // initialPage={currentPage}
             onPageChange={handlePageClick}

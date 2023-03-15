@@ -173,11 +173,13 @@
         transition: 250ms ease-in-out;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 5px 7px rgba(0, 0, 0, 0.18), 0 3px 6px rgba(0, 0, 0, 0.24);
         border-radius: 2px;      }
-      &.previous {
+      &.previous,
+      &.next {
         max-width: 88px;
       }
       &.next {
-        max-width: 50px;
+        //padding: 0 19px;
+        max-width: 88px;
       }
     }
   }

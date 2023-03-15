@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
-import { useLocation, useNavigate } from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
 import logo from "../images/logo.png";
@@ -75,13 +75,15 @@ const MainPage = () => {
     <>
       <section className="section">
         <div className="section__wrapper">
-          <div className="section__logo">
+          <Link to="/"
+
+           className="section__logo">
             <img
               className="section__logo__image"
               src={logo}
               alt="Logo Rick and Morty"
             />
-          </div>
+          </Link>
 
           {data ? (
             <ul className="section__cards">

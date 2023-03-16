@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useFormik } from "formik";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
+import { useSelector, useDispatch } from "react-redux";
+import { logoutSuccess } from "../reducers/userSlice";
 import logo from "../images/logo.png";
 import Card from "./Card";
+import Login from "./Login";
 
 const MainPage = () => {
   const [data, setData] = useState([]);
@@ -15,6 +18,9 @@ const MainPage = () => {
   const sortedCharacters = [...data].sort((a, b) =>
     a.name.localeCompare(b.name)
   );
+  const clientWidth = document.body.clientWidth;
+  const dispatch = useDispatch();
+  const { isLoggedIn } = useSelector((state) => state.user);
 
   useEffect(() => {
     const query = new URLSearchParams(location.search);
@@ -69,64 +75,80 @@ const MainPage = () => {
     navigate(`/characters/${id}`);
   };
 
-  const clientWidth = document.body.clientWidth;
+  const handleLogout = () => {
+    dispatch(logoutSuccess());
+    navigate("/");
+  };
 
   return (
     <>
       <section className="section">
         <div className="section__wrapper">
-          <Link to="/"
-
-           className="section__logo">
+          {isLoggedIn ? (
+            <button className="section__logout" onClick={handleLogout}>
+              Logout
+            </button>
+          ) : (
+            <></>
+          )}
+          <Link to="/" className="section__logo">
             <img
               className="section__logo__image"
               src={logo}
               alt="Logo Rick and Morty"
             />
           </Link>
-
-          {data ? (
-            <ul className="section__cards">
-              <form className="section__search" onSubmit={formik.handleSubmit}>
-                <label htmlFor="search">
-                  <input
-                    className="section__search__input"
-                    id="search"
-                    placeholder="Filter by name..."
-                    name="search"
-                    type="text"
-                    onChange={formik.handleChange}
-                    value={formik.values.search}
-                  />
-                </label>
-              </form>
-
-              {sortedCharacters.map(({ id, image, name, gender }) => {
-                return (
-                  <Card
-                    key={id}
-                    id={id}
-                    gender={gender}
-                    image={image}
-                    name={name}
-                    onClick={() => handleCardClick(id)}
-                  />
-                );
-              })}
-            </ul>
+          {!isLoggedIn ? (
+            <Login />
           ) : (
-            <p>Loading data...</p>
+            <>
+              {data ? (
+                <ul className="section__cards">
+                  <form
+                    className="section__search"
+                    onSubmit={formik.handleSubmit}
+                  >
+                    <label htmlFor="search">
+                      <input
+                        className="section__search__input"
+                        id="search"
+                        placeholder="Filter by name..."
+                        name="search"
+                        type="text"
+                        onChange={formik.handleChange}
+                        value={formik.values.search}
+                      />
+                    </label>
+                  </form>
+
+                  {sortedCharacters.map(({ id, image, name, gender }) => {
+                    return (
+                      <Card
+                        key={id}
+                        id={id}
+                        gender={gender}
+                        image={image}
+                        name={name}
+                        onClick={() => handleCardClick(id)}
+                      />
+                    );
+                  })}
+                </ul>
+              ) : (
+                <p>Loading data...</p>
+              )}
+              <ReactPaginate
+                pageCount={totalPages}
+                pageRangeDisplayed={clientWidth > 500 ? 5 : 1}
+                marginPagesDisplayed={clientWidth > 500 ? 2 : 0}
+                forcePage={currentPage}
+                // initialPage={currentPage}
+                onPageChange={handlePageClick}
+                containerClassName={"section__pagination"}
+                activeClassName={"active"}
+              />
+            </>
           )}
-          <ReactPaginate
-            pageCount={totalPages}
-            pageRangeDisplayed={clientWidth > 500 ? 5 : 1 }
-            marginPagesDisplayed={clientWidth > 500 ? 2 : 0}
-            forcePage={currentPage}
-            // initialPage={currentPage}
-            onPageChange={handlePageClick}
-            containerClassName={"section__pagination"}
-            activeClassName={"active"}
-          />
         </div>
       </section>
     </>

@@ -1,6 +1,10 @@
 @import 'reset.css';
 @import 'character.css';
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@font-face {
+  font-family: rick-n-morty;
+  src: url(./fonts/rick-n-morty.ttf);
+}
 #root {
   display: flex;
   justify-content: center;
@@ -21,6 +25,45 @@
   margin: 0 auto 16px;
   display: flex;
   justify-content: center;
+}
+.section__login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__login__title {
+  font-family: "rick-n-morty", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: #07aac0;
+  text-shadow: 0 1px 1px #033e47;
+  margin-bottom: 15px;
+  cursor: default;
+}
+.section__logout {
+  align-self: flex-end;
+  font-family: "rick-n-morty", sans-serif;
+  color: #07aac0;
+  text-shadow: 0 1px 1px #033e47;
+  margin-top: 25px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  background-color: inherit;
+  border: 0.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14);
+}
+.section__logout:hover, .section__logout:active {
+  transform: scale(1.13);
+  transition: 250ms ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3), 0 5px 7px rgba(0, 0, 0, 0.18), 0 3px 6px rgba(0, 0, 0, 0.24);
+  border-radius: 6px;
 }
 .section__search {
   grid-column: 1/5;

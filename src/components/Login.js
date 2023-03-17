@@ -20,7 +20,11 @@ function Login() {
 
   return (
     <div className="section__login">
+      <h1 className="section__login__titleGlow">Login</h1>
+      <h1 className="section__login__titleStr">Login</h1>
+
       <h1 className="section__login__title">Login</h1>
+
       <GoogleLogin
         onSuccess={handleLoginSuccess}
         onFailure={handleLoginFailure}

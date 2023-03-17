@@ -31,17 +31,25 @@
   flex-direction: column;
   align-items: center;
 }
-.section__login__title {
+.section__login__title, .section__login__titleStr, .section__login__titleGlow {
+  position: relative;
   font-family: "rick-n-morty", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 30px;
   line-height: 24px;
   letter-spacing: 0.15px;
   color: #07aac0;
-  text-shadow: 0 1px 1px #033e47;
   margin-bottom: 15px;
   cursor: default;
+}
+.section__login__titleStr {
+  position: absolute;
+  text-shadow: 0 0 2px #033e47;
+}
+.section__login__titleGlow {
+  position: absolute;
+  text-shadow: 0 0 4px #67fa4c;
 }
 .section__logout {
   align-self: flex-end;

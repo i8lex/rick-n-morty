@@ -30,21 +30,33 @@
   }
 
   &__login {
+    //padding-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    &__title {
+    &__title,
+    &__titleStr,
+    &__titleGlow
+    {
+      position: relative;
       font-family: 'rick-n-morty',sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 25px;
+      font-size: 30px;
       line-height: 24px;
       letter-spacing: 0.15px;
       color: #07aac0;
-      text-shadow: 0 1px 1px #033e47;
+      //text-shadow: 0 1px 1px #033e47;
       margin-bottom: 15px;
       cursor: default ;
+    }
+    &__titleStr {
+      position: absolute;
+      text-shadow: 0 0 2px #033e47;
+    }
+    &__titleGlow {
+      position: absolute;
+      text-shadow: 0 0 4px #67fa4c;
     }
   }
 
